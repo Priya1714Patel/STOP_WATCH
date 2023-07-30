@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/watchimage"
+    tools:context=".MainActivity">
+   <RelativeLayout
+       android:id="@+id/btn"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_centerHorizontal="true"
+       android:layout_marginTop="100dp">
+    <TextView
+        android:id="@+id/text1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="STOP WATCH"
+        android:textStyle="italic"
+        android:layout_centerVertical="true"
+        android:textSize="40sp"
+        />
+
+    <ImageView
+        android:id="@+id/img1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/watchicon"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@+id/text1"
+        />
+        </RelativeLayout>
+    <TextView
+        android:id="@+id/text2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btn"
+        android:layout_marginTop="100dp"
+        android:text="0:00:00"
+        android:textSize="45dp"
+        android:layout_centerHorizontal="true"/>
+
+   <RelativeLayout
+       android:id="@+id/btn2"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_below="@+id/text2"
+       android:layout_centerHorizontal="true"
+       android:layout_marginTop="200dp"
+       >
+
+       <com.google.android.material.floatingactionbutton.FloatingActionButton
+
+           android:id="@+id/btn3"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:contentDescription="@android:string/yes"
+           android:src="@drawable/stop"
+           android:onClick="onStop"/>
+
+       <com.google.android.material.floatingactionbutton.FloatingActionButton
+           android:id="@+id/btn4"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:contentDescription="@android:string/yes"
+           android:layout_toRightOf="@+id/btn3"
+           android:layout_marginLeft="15dp"
+           android:src="@drawable/play"
+           android:onClick="onPlay"/>
+
+       <com.google.android.material.floatingactionbutton.FloatingActionButton
+
+           android:id="@+id/btn5"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_toRightOf="@id/btn4"
+           android:layout_marginLeft="15dp"
+           android:contentDescription="@android:string/yes"
+           android:src="@drawable/restart"
+           android:onClick="onRestart"/>
+
+
+   </RelativeLayout>
+</RelativeLayout>
